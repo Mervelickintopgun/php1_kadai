@@ -11,25 +11,9 @@
 |
 */
 
-Route::get('/', function() {
-    return view('index');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/map', function() {
-    return view('map');
-});
+Route::resource('products', 'ProductController');
 
-Route::get('/myaccount', function() {
-    return view('myaccount');
-});
-
-Route::get('/app', function() {
-    return view('app');
-})->where('any', '.*');
-
-
-// データ受け渡しを行う際に使用
-// Route::get('/tests/{post}', 'TestController@show');
-Auth::routes();
-
-// Route::get('/myaccount', 'HomeController@index')->name('myaccount');

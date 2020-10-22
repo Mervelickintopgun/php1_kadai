@@ -43,13 +43,13 @@ return [
 
         'single' => [
             'driver' => 'single',
-            'path' => storage_path('logs/KOKABE.log'),
+            'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
         ],
 
         'daily' => [
             'driver' => 'daily',
-            'path' => storage_path('logs/KOKABE.log'),
+            'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
             'days' => 14,
         ],
@@ -57,7 +57,7 @@ return [
         'slack' => [
             'driver' => 'slack',
             'url' => env('LOG_SLACK_WEBHOOK_URL'),
-            'username' => 'KOKABE Log',
+            'username' => 'Laravel Log',
             'emoji' => ':boom:',
             'level' => 'critical',
         ],
@@ -97,7 +97,7 @@ return [
         ],
 
         'emergency' => [
-            'path' => storage_path('logs/KOKABE.log'),
+            'path' => storage_path('logs/laravel.log'),
         ],
     ],
 
